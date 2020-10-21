@@ -1,98 +1,124 @@
-
-*{
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-}
-.game{
-    width: 1000px;
-    height: 500px;
-    border: 10px solid black;
-    margin: auto;
-    background-color: rgb(65, 172, 243);
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
 
-#character{
-    position: relative;
-    top: 350px;
-    left: 150px;
+p {
+  text-align: center;
+  font-size: 50px;
+  font-variant: small-caps;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.game {
+  width: 1000px;
+  height: 500px;
+  border: 10px solid black;
+  margin: auto;
+  background-color: rgb(65, 172, 243);
+}
+
+#character {
+  position: relative;
+  top: 350px;
+  left: 150px;
 }
 
 #character > img {
-    width: 50px;
-    height: 120px;
+  width: 50px;
+  height: 120px;
 }
 
-@keyframes jump{
-    0%{top: 370px;}
-    10%{top: 300px;}
-    20%{top: 250px;}
-    50%{top: 210px;}
-    80%{top: 250px;}
-    90%{top: 300px;}
-    100%{top: 370px;}
-}
-.animate{
-    animation: jump 0.3s linear;
+#character.animate {
+  animation: characterJump 0.3s linear;
 }
 
-#block{
-    background-color: blue;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    top: 470px;
-    left: 500px;
-    animation: block 1s infinite linear;
+#block.animate {
+  animation: blockMovement 1s infinite linear;
 }
 
-#cloud{
-    background-color: whitesmoke;
-    width: 200px;
-    height: 60px;
-    border-radius: 200px;
-    -moz-border-radius: 200px;
-    -webkit-border-radius: 200px;
-    position: relative;
-    top: -100px;
-    left: 100px;
-    animation: block 10s infinite linear;
+#block {
+  background-color: blue;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 470px;
+  left: 500px;
 }
 
-#cloud2{
-    background-color: whitesmoke;
-    width: 300px;
-    height: 100px;
-    border-radius: 200px;
-    -moz-border-radius: 200px;
-    -webkit-border-radius: 200px;
-    position: relative;
-    top: -100px;
-    left: 100px;
-    animation: block 4s infinite linear;
+.cloud {
+  background-color: whitesmoke;
+  border-radius: 200px;
+  -moz-border-radius: 200px;
+  -webkit-border-radius: 200px;
+  position: relative;
+  top: -100px;
+  left: 100px;
 }
 
-#cloud3{
-    background-color: whitesmoke;
-    width: 150px;
-    height: 60px;
-    border-radius: 200px;
-    -moz-border-radius: 200px;
-    -webkit-border-radius: 200px;
-    position: relative;
-    top: -100px;
-    left: 100px;
-    animation: block 7s infinite linear;
+#cloud1 {
+  width: 200px;
+  height: 60px;
+  animation: cloudMovement 10s infinite linear;
 }
 
-@keyframes block{
-    0%{left: 1000px}
-    100%{left: -20px}
+#cloud2 {
+  width: 300px;
+  height: 100px;
+  animation: cloudMovement 4s infinite linear;
 }
 
-p{
-    text-align: center;
-    font-size: 50px;
-    font-variant: small-caps;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+#cloud3 {
+  width: 150px;
+  height: 60px;
+  animation: cloudMovement 7s infinite linear;
+}
+
+@keyframes blockMovement {
+  0% {
+    left: 1000px;
+  }
+  100% {
+    left: -20px;
+  }
+}
+
+@keyframes cloudMovement {
+  0% {
+    left: 1000px;
+  }
+  100% {
+    left: -300px;
+  }
+}
+
+@keyframes characterJump {
+  0% {
+    top: 350px;
+  }
+  2% {
+    top: 360px;
+  }
+  10% {
+    top: 300px;
+  }
+  20% {
+    top: 250px;
+  }
+  50% {
+    top: 210px;
+  }
+  80% {
+    top: 250px;
+  }
+  90% {
+    top: 300px;
+  }
+  98% {
+    top: 360px;
+  }
+  100% {
+    top: 350px;
+  }
 }

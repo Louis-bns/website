@@ -1,14 +1,14 @@
 h1 {
-    width: 257px;
-    margin: 0 auto;
-    border-bottom: 2px solid black;
-    text-align: center;
-    background-color: rgb(0, 255, 179);
-    border-radius: 15px;
-    font-style: unset;
-    color: rgb(205, 50, 205);
+  width: 257px;
+  margin: 0 auto;
+  border-bottom: 2px solid black;
+  text-align: center;
+  background-color: rgb(0, 255, 179);
+  border-radius: 15px;
+  font-style: unset;
+  color: rgb(205, 50, 205);
 }
 
 body {
-    background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
 }
