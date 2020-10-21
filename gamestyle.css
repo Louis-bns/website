@@ -7,8 +7,40 @@
 p {
   text-align: center;
   font-size: 50px;
-  font-variant: small-caps;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#game-over-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  z-index: 99;
+}
+
+#game-over {
+  background-color: white;
+  width: 650px;
+  height: 100px;
+  margin-top: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 200px;
+  -moz-border-radius: 200px;
+  -webkit-border-radius: 200px;
+  text-align: center;
+  visibility: hidden;
+}
+
+#game-over.shown {
+    visibility: visible;
+}
+
+#game-over-score {
+  margin: 5px 10px;
 }
 
 .game {
@@ -21,13 +53,13 @@ p {
 
 #character {
   position: relative;
-  top: 350px;
+  top: 400px;
   left: 150px;
 }
 
 #character > img {
-  width: 50px;
-  height: 120px;
+  width: 70px;
+  height: 110px;
 }
 
 #character.animate {
@@ -43,7 +75,7 @@ p {
   width: 30px;
   height: 30px;
   position: relative;
-  top: 470px;
+  top: 356px;
   left: 500px;
 }
 
@@ -60,18 +92,27 @@ p {
 #cloud1 {
   width: 200px;
   height: 60px;
+}
+
+#cloud1.animate {
   animation: cloudMovement 10s infinite linear;
 }
 
 #cloud2 {
   width: 300px;
   height: 100px;
+}
+
+#cloud2.animate {
   animation: cloudMovement 4s infinite linear;
 }
 
 #cloud3 {
   width: 150px;
   height: 60px;
+}
+
+#cloud3.animate {
   animation: cloudMovement 7s infinite linear;
 }
 
@@ -80,7 +121,7 @@ p {
     left: 1000px;
   }
   100% {
-    left: -20px;
+    left: -30px;
   }
 }
 
@@ -95,30 +136,30 @@ p {
 
 @keyframes characterJump {
   0% {
-    top: 350px;
+    top: 400px;
   }
   2% {
-    top: 360px;
+    top: 410px;
   }
   10% {
-    top: 300px;
+    top: 350px;
   }
   20% {
-    top: 250px;
-  }
-  50% {
-    top: 210px;
-  }
-  80% {
-    top: 250px;
-  }
-  90% {
     top: 300px;
   }
+  50% {
+    top: 260px;
+  }
+  80% {
+    top: 300px;
+  }
+  90% {
+    top: 350px;
+  }
   98% {
-    top: 360px;
+    top: 410px;
   }
   100% {
-    top: 350px;
+    top: 400px;
   }
 }

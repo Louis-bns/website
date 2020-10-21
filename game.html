@@ -7,13 +7,23 @@
   </head>
 
   <body>
-    <div class="game">
-      <div id="block" class="animate"></div>
-      <div id="character"><img src="character.png" alt="character" /></div>
-      <div id="cloud1" class="cloud"></div>
-      <div id="cloud2" class="cloud"></div>
-      <div id="cloud3" class="cloud"></div>
+    <div id="game-over-wrapper">
+      <div id="game-over">
+        <p id="game-over-score">&nbsp;</p>
+        <hr />
+        you have to
+        <button type="button" id="restart">restart</button>
+      </div>
     </div>
+
+    <div class="game">
+      <div id="character"><img src="character.png" alt="character" /></div>
+      <div id="block" class="animate"></div>
+      <div id="cloud1" class="cloud animate"></div>
+      <div id="cloud2" class="cloud animate"></div>
+      <div id="cloud3" class="cloud animate"></div>
+    </div>
+
     <p>Score: <span id="scoreSpan"></span></p>
     <script src="gamescript.js"></script>
   </body>
