@@ -62,7 +62,7 @@ const checkDead = setInterval(function () {
       approachingCharacter = true;
   }
 
-  if (blockLeft < 170 && blockLeft > 130 && characterTop >= 350) {
+  if (blockLeft < 210 && blockLeft > 1 && characterTop >= 350) {
     showGameOverScreen();
     counter = 0;
   }
