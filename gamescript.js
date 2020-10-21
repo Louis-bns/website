@@ -11,14 +11,14 @@ function jump() {
         character.classList.remove("animate");
     }, 300);
 }
-    
+
 
 const checkDead = setInterval(function () {
     const characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     const blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
     if (blockLeft < 170 && blockLeft > 130 && characterTop >= 350) {
         block.style.animation = "none";
-        alert("Game Over. score: " + Math.floor(counter / 100));
+        alert("Game Over. score: " + Math.floor(counter / 92));
         counter = 0;
         block.style.animation = "block 1s infinite linear";
     } else {

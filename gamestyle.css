@@ -1,3 +1,4 @@
+
 *{
     padding: 0;
     margin: 0;
@@ -12,20 +13,24 @@
 }
 
 #character{
-    border-radius: 100px;
-    width:50px;
-    height:120px;
-    background-color: tomato;
     position: relative;
-    top: 380px;
+    top: 350px;
     left: 150px;
 }
 
+#character > img {
+    width: 50px;
+    height: 120px;
+}
+
 @keyframes jump{
-    0%{top: 390px;}
-    30%{top: 250px;}
-    70%{top: 250px;}
-    100%{top: 390px;}
+    0%{top: 370px;}
+    10%{top: 300px;}
+    20%{top: 250px;}
+    50%{top: 210px;}
+    80%{top: 250px;}
+    90%{top: 300px;}
+    100%{top: 370px;}
 }
 .animate{
     animation: jump 0.3s linear;
@@ -36,7 +41,7 @@
     width: 30px;
     height: 30px;
     position: relative;
-    top: 350px;
+    top: 470px;
     left: 500px;
     animation: block 1s infinite linear;
 }
