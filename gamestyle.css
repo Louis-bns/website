@@ -70,12 +70,15 @@ p {
   animation: blockMovement 1s infinite linear;
 }
 
+#block > img {
+  width: 150px;
+  height: 120px;
+}
 #block {
-  background-color: blue;
-  width: 30px;
-  height: 30px;
+  width: 150px;
+  height: 120px;
   position: relative;
-  top: 356px;
+  top: 290px;
   left: 500px;
 }
 
