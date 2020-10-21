@@ -3,10 +3,10 @@ const block = document.getElementById("block");
 const score = document.getElementById("scoreSpan");
 let counter = 0;
 
-window.addEventListener('keydown', (evt) => {
-    if (evt.code === "Space") {
-        jump();
-    }
+window.addEventListener("keydown", (evt) => {
+  if (evt.code === "Space") {
+    jump();
+  }
 });
 
 function jump() {
